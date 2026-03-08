@@ -1,5 +1,4 @@
 Plano do Projeto
-Copie este texto para o seu relatório ou para o arquivo README.md.
 
 Objetivo: Construir um ecossistema de Business Intelligence para análise de gastos de cartões de crédito, utilizando dados de 12 meses de faturas.
 
@@ -19,7 +18,6 @@ Análise e Validação: Execução de consultas SQL para responder métricas de 
 
 
 Arquitetura do Data Warehouse
-Este item descreve a estrutura do seu banco de dados.
 
 Modelo: Star Schema (Esquema em Estrela)
 
