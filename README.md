@@ -33,9 +33,26 @@ dim_categoria: Classificações de despesas (ex: Restaurante, Saúde).
 
 dim_estabelecimento: Descrição do local da transação.
 
+
 Como Executar
 
 Crie o banco de dados no PostgreSQL e execute o script `setup_dw.sql`.
 Instale as dependências: `pip install pandas sqlalchemy psycopg2`.
 Coloque os CSVs na pasta `/dados`.
 Execute o script: `python etl.py`.
+
+Resultados do banco de dados:
+
+<img width="491" height="475" alt="image" src="https://github.com/user-attachments/assets/b00c5166-55a3-4dfd-a1a4-80fd3f3186da" />
+
+<img width="596" height="478" alt="image" src="https://github.com/user-attachments/assets/31e69ecc-d9c1-430a-a1a9-e9695a302615" />
+
+<img width="588" height="500" alt="image" src="https://github.com/user-attachments/assets/dd7c6271-b139-4331-840b-edc74de9c42b" />
+
+<img width="552" height="327" alt="image" src="https://github.com/user-attachments/assets/860a8e0e-afcf-4e8e-a863-5aa20f6ab05d" />
+
+<img width="858" height="475" alt="image" src="https://github.com/user-attachments/assets/9ccde8fc-ac90-4935-9b88-8e03660923e8" />
+
+
+
+
