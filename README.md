@@ -17,6 +17,7 @@ Carga: Ingestão para PostgreSQL com orquestração de chaves substitutas (IDs).
 Análise e Validação: Execução de consultas SQL para responder métricas de negócio (Gasto por titular, categoria e tempo).
 
 
+
 Arquitetura do Data Warehouse
 
 Modelo: Star Schema (Esquema em Estrela)
@@ -34,12 +35,23 @@ dim_categoria: Classificações de despesas (ex: Restaurante, Saúde).
 dim_estabelecimento: Descrição do local da transação.
 
 
+
+Dicionário de Dados
+
+Este documento descreve a estrutura do seu Data Warehouse para garantir a clareza do modelo:
+
+<img width="585" height="233" alt="image" src="https://github.com/user-attachments/assets/bea1863b-16c0-4d17-bfe9-e366f9824a5a" />
+
+
+
 Como Executar
 
 Crie o banco de dados no PostgreSQL e execute o script `setup_dw.sql`.
 Instale as dependências: `pip install pandas sqlalchemy psycopg2`.
 Coloque os CSVs na pasta `/dados`.
 Execute o script: `python etl.py`.
+
+
 
 Resultados do banco de dados:
 
@@ -49,9 +61,27 @@ Resultados do banco de dados:
 
 <img width="588" height="500" alt="image" src="https://github.com/user-attachments/assets/dd7c6271-b139-4331-840b-edc74de9c42b" />
 
-<img width="552" height="327" alt="image" src="https://github.com/user-attachments/assets/860a8e0e-afcf-4e8e-a863-5aa20f6ab05d" />
+<img width="722" height="346" alt="image" src="https://github.com/user-attachments/assets/0399d044-0398-4f4c-86e5-fe00cf31a7b3" />
 
 <img width="858" height="475" alt="image" src="https://github.com/user-attachments/assets/9ccde8fc-ac90-4935-9b88-8e03660923e8" />
+
+Perguntas de Negócio:
+
+<img width="561" height="499" alt="image" src="https://github.com/user-attachments/assets/ed3270bd-6b40-4897-ac95-3239b05482ed" />
+
+<img width="700" height="501" alt="image" src="https://github.com/user-attachments/assets/682f9292-57f9-44dc-a91f-ca154cc60f76" />
+
+<img width="755" height="334" alt="image" src="https://github.com/user-attachments/assets/10b5c921-297e-49f6-9d53-90f8b4f655c9" />
+
+<img width="726" height="367" alt="image" src="https://github.com/user-attachments/assets/df2e94a0-941e-426d-8c8c-3f7e3c88494b" />
+
+<img width="802" height="307" alt="image" src="https://github.com/user-attachments/assets/a6f18ee9-e132-4b26-b9b1-fb1c87d4bfcd" />
+
+
+
+
+
+
 
 
 
