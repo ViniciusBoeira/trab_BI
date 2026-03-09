@@ -64,9 +64,10 @@ with engine.begin() as conn:
     """))
 
     conn.execute(text("""
-        INSERT INTO dim_titular (id_titular, nome_titular)
-        SELECT ROW_NUMBER() OVER (), "Nome no Cartão" FROM (SELECT DISTINCT "Nome no Cartão" FROM staging_transacoes) as sub;
-    """))
+    INSERT INTO dim_titular (id_titular, nome_titular, final_cartao)
+    SELECT ROW_NUMBER() OVER (), "Nome no Cartão", "Final do Cartão" 
+    FROM (SELECT DISTINCT "Nome no Cartão", "Final do Cartão" FROM staging_transacoes) as sub;
+"""))
 
     conn.execute(text("""
         INSERT INTO dim_data (id_data, data, dia, mes, ano, trimestre, dia_semana)
