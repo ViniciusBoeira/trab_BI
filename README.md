@@ -77,7 +77,54 @@ Perguntas de Negócio:
 
 <img width="802" height="307" alt="image" src="https://github.com/user-attachments/assets/a6f18ee9-e132-4b26-b9b1-fb1c87d4bfcd" />
 
+(Star Schema)
 
+```mermaid
+erDiagram
+
+    DIM_DATA {
+        INTEGER id_data PK
+        DATE data
+        INTEGER dia
+        INTEGER mes
+        INTEGER ano
+        INTEGER trimestre
+        TEXT dia_semana
+    }
+
+    DIM_TITULAR {
+        INTEGER id_titular PK
+        TEXT nome_titular
+        INTEGER final_cartao
+    }
+
+    DIM_CATEGORIA {
+        INTEGER id_categoria PK
+        TEXT nome_categoria
+    }
+
+    DIM_ESTABELECIMENTO {
+        INTEGER id_estabelecimento PK
+        TEXT nome_estabelecimento
+    }
+
+    FATO_TRANSACAO {
+        INTEGER id_data FK
+        INTEGER id_titular FK
+        INTEGER id_categoria FK
+        INTEGER id_estabelecimento FK
+        REAL valor_brl
+        REAL valor_usd
+        REAL cotacao
+        INTEGER num_parcela
+        INTEGER total_parcelas
+    }
+
+    DIM_DATA ||--o{ FATO_TRANSACAO : possui
+    DIM_TITULAR ||--o{ FATO_TRANSACAO : possui
+    DIM_CATEGORIA ||--o{ FATO_TRANSACAO : possui
+    DIM_ESTABELECIMENTO ||--o{ FATO_TRANSACAO : possui
+```
 
 
 
